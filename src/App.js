@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import React, { createContext, useState } from 'react';
+import { NavBar } from './components/Navbar/NavBar';
+
+export const ThemeContext = createContext(null);
 
 function App() {
+
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div className='App' id={theme}>
+          <NavBar theme={theme} toggleTheme={toggleTheme}/>
+          <Routes></Routes>
+        </div>
+      </ThemeContext.Provider>
+    </BrowserRouter>
   );
 }
 
