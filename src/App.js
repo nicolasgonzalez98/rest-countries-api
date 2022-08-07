@@ -18,7 +18,9 @@ function App() {
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div className='App' id={theme}>
           <NavBar theme={theme} toggleTheme={toggleTheme}/>
-          <Routes></Routes>
+          <Routes>
+            
+          </Routes>
         </div>
       </ThemeContext.Provider>
     </BrowserRouter>

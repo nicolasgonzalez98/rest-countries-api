@@ -21,7 +21,7 @@
     margin-right: 1rem;
 }
 
-@media (max-width:376px){
+@media (max-width:479px){
     .nav{
         font-size: .7rem;
         padding: 1rem 1rem;
