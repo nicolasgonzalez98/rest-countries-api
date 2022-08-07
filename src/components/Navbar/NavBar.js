@@ -1,5 +1,5 @@
 import './NavBar.css'
-import { MoonOutline, SunnyOutline } from 'react-ionicons'
+import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 
 
 export function NavBar({theme, toggleTheme}){
@@ -15,8 +15,8 @@ export function NavBar({theme, toggleTheme}){
             <div className="right">
                 <button onClick={toggleTheme} className='toggle-button'>
                     {theme === 'dark' ? 
-                        <SunnyOutline color={'hsl(0, 0%, 100%)'}/> : 
-                        <MoonOutline color={'hsl(200, 15%, 8%)'}/>
+                        <IoSunnyOutline size={'xs'} color={'hsl(0, 0%, 100%)'}/> : 
+                        <IoMoonOutline size={'xs'} color={'hsl(200, 15%, 8%)'}/>
                     }
                 </button>
             </div>

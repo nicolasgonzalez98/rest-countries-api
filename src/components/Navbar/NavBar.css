@@ -9,6 +9,7 @@
 
 .nav button{
     border: none;
+    width:2rem;
 }
 
 .toggle-button{
@@ -21,10 +22,18 @@
     margin-right: 1rem;
 }
 
+.icon-theme{
+    font-size: 15px;
+}
+
 @media (max-width:479px){
     .nav{
         font-size: .7rem;
         padding: 1rem 1rem;
+    }
+
+    .nav button{
+        width:1.3rem;
     }
 }
 
