@@ -17,4 +17,16 @@
   color: var(--dark-mode-text-light-mode-elements);
 }
 
+.App{
+  min-height: 100vh;
+}
+
+#light .card-country{
+  background-color: var(--dark-mode-text-light-mode-elements);
+  box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
+}
+
+#dark .card-country{
+  background-color: var(--dark--mode--elements);
+}
 

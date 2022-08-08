@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import React, { createContext, useState } from 'react';
 import { NavBar } from './components/Navbar/NavBar';
+import { Home } from './components/Home/Home';
 
 export const ThemeContext = createContext(null);
 
@@ -19,7 +20,7 @@ function App() {
         <div className='App' id={theme}>
           <NavBar theme={theme} toggleTheme={toggleTheme}/>
           <Routes>
-            
+            <Route path='/' element={<Home />}/>
           </Routes>
         </div>
       </ThemeContext.Provider>
