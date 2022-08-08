@@ -6,4 +6,12 @@
     gap: 3rem;
     height: 100%;
 }
-    
+
+@media (max-width:479px){
+    .CardsDisplay{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        gap: 1rem;
+        width: 90%;
+    }
+}
