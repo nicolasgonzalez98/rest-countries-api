@@ -21,12 +21,33 @@
   min-height: 100vh;
 }
 
-#light .card-country{
+#light .card-country, 
+#light .SearchBar input, 
+#light .SearchBar ::placeholder
+#light .RegionType select,
+#light .nav
+{
   background-color: var(--dark-mode-text-light-mode-elements);
   box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
 }
 
-#dark .card-country{
+#dark .card-country, 
+#dark .SearchBar input, 
+#dark .SearchBar ::placeholder,
+#dark .RegionType select,
+#dark .nav
+{
   background-color: var(--dark--mode--elements);
+  color: var(--dark-mode-text-light-mode-elements);
+}
+
+#light .SearchBar,
+#light .RegionType{
+  box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
+}
+
+#dark .SearchBar,
+#dark .RegionType{
+  box-shadow: 0 8px 24px rgba(64, 68, 71, 0.2);
 }
 

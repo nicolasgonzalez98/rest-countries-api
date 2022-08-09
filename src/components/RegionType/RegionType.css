@@ -1,0 +1,12 @@
+.RegionType{
+    width: 20%;
+    
+}
+
+.RegionType select, .RegionType option{
+    border: none;
+    width: 100%;
+    padding: 1rem;
+}
+
+

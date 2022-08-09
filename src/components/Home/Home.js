@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { get_all_countries } from '../../redux/actions'
 import { CardsDisplay } from '../CardsDisplay/CardsDisplay'
+import { Filters } from '../Filters/Filters'
 import './Home.css'
 
 export function Home(){
@@ -17,7 +18,7 @@ export function Home(){
 
     return (
         <div className='Home'>
-            
+            <Filters />
             <CardsDisplay list={countries}/>
         </div>
     )
