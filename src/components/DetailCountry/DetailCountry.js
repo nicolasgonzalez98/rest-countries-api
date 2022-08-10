@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";
 import { get_country_by_name } from '../../redux/actions';
 import { BordersList } from '../Borders-List/BordersList';
+import { IoArrowBackOutline } from "react-icons/io5";
 
 export function DetailCountry(){
 
@@ -26,7 +27,7 @@ export function DetailCountry(){
     }, [dispatch, name])
 
     let country = useSelector(state => state.country_data)
-    console.log(country)
+    
 
     return (
         <div className='DetailCountry'>
@@ -37,7 +38,9 @@ export function DetailCountry(){
                 {(country.common.toLowerCase() !== name.toLowerCase())?
             <><div>Loading...</div></> : 
             <>
-                        <button className='back'>Back</button>
+                        <button onClick={() => {window.history.back();}} className='back'>
+                            <IoArrowBackOutline />Back
+                        </button>
 
                         <div className='box-info-country'>
                             <img src={country.flag} alt={`${country.common} flag`}/>

@@ -45,7 +45,7 @@ export function filter_by_region(region){
 
 export function get_country_by_name(name){
     return function(dispatch){
-        return axios(`https://restcountries.com/v3.1/name/${name}`)
+        return axios(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
         .then(info => info.data)
         .then(data => data.map(e => {
             return {

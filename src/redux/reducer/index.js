@@ -27,7 +27,7 @@ const rootReducer = (state = initialState, action) => {
             if(action.payload !== 'all'){
                 region_filter = state.all_countries.filter(e => e.region === action.payload)
             }else{
-                console.log(action.payload)
+                
                 region_filter = state.all_countries
             }
             return {

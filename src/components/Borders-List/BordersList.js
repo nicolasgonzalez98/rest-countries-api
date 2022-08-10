@@ -14,7 +14,7 @@ export function BordersList({borders}){
 
     let countries = useSelector(state => state.border_countries)
 
-    console.log(countries)
+    
 
     return (
         <div className="BordersList">
