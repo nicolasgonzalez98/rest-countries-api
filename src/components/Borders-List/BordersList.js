@@ -18,8 +18,10 @@ export function BordersList({borders}){
 
     return (
         <div className="BordersList">
-            <p>Border Countries: </p>
+            <p className="type">Border Countries: </p>
+            <div>
             {countries.map(e => {return <Link to={`/${e.name.toLowerCase()}`}><button className="box-name">{e.name}</button></Link>})}
+            </div>
         </div>
     )
 }
