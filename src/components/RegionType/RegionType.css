@@ -1,5 +1,6 @@
 .RegionType{
     width: 20%;
+    border-radius: 16px;
 }
 
 .RegionType select, .RegionType option{
@@ -8,9 +9,13 @@
     padding: 1rem;
 }
 
+.RegionType select{
+    border-radius: 8px;
+    
+}
+
 @media(max-width: 479px){
     .RegionType{
-        
-        width: 50%;
+        width: 40%;
     }
 }
