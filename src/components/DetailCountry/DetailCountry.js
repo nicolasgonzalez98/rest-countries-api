@@ -7,10 +7,6 @@ import { BordersList } from '../Borders-List/BordersList';
 
 export function DetailCountry(){
 
-    function capitalize(word) {
-        return word[0].toUpperCase() + word.slice(1).toLowerCase();
-    }
-
     function keys_currencies(list){
         let currencies = Object.keys(list).map(e => list[e].name)
         return currencies.length > 1 ? currencies.join(', ') : currencies[0]
@@ -30,6 +26,7 @@ export function DetailCountry(){
     }, [dispatch, name])
 
     let country = useSelector(state => state.country_data)
+    console.log(country)
 
     return (
         <div className='DetailCountry'>

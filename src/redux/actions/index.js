@@ -73,11 +73,11 @@ export function get_country_by_name(name){
 
 export function get_border_countries(names){
     return function(dispatch){
-        return axios(`https://restcountries.com/v2/alpha?codes=${names}`)
+        return axios(`https://restcountries.com/v3.1/alpha?codes=${names}`)
         .then(info => info.data)
         .then(data => data.map(e => {
             return {
-                name: e.name
+                name: e.name.common
             }
         }))
         .then(data => {
