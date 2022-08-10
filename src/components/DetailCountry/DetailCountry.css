@@ -10,6 +10,7 @@
     padding: 1rem;
     width: 3%;
     border-style: none;
+    cursor: pointer;
 }
 
 .box-info-country{
@@ -45,4 +46,36 @@
 .right-box-info-country article .left-top-info-country span,
 .right-box-info-country article .right-bottom-info-country span{
     font-weight: 300;
+}
+
+@media (max-width: 479px) {
+    .back{
+        margin: 1.5rem 0;
+        padding: 1rem;
+        width: 20%;
+        
+    }
+
+    .box-info-country{
+        flex-direction: column;
+    }
+
+    .box-info-country img{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .right-box-info-country{
+        padding: 0rem;
+        width: 100%;
+    }
+
+    .right-box-info-country article{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        justify-content: space-evenly;
+        height: 20rem;
+    }
+    
 }
