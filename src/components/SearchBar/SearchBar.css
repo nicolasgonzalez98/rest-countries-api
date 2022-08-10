@@ -7,5 +7,11 @@
 
 .SearchBar{
     width: 30%;
-    
+}
+
+@media (max-width: 479px) {
+    .SearchBar{
+        width: 90%;
+        margin-bottom: .5rem;
+    }
 }

@@ -1,6 +1,5 @@
 .RegionType{
     width: 20%;
-    
 }
 
 .RegionType select, .RegionType option{
@@ -9,4 +8,9 @@
     padding: 1rem;
 }
 
-
+@media(max-width: 479px){
+    .RegionType{
+        
+        width: 50%;
+    }
+}
