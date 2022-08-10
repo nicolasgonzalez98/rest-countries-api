@@ -1,0 +1,15 @@
+.BordersList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.BordersList p{
+    font-weight: 800;
+}
+
+.box-name{
+    margin: 0.2rem 1rem;
+    padding: .2rem 1rem;
+    border-style: none;
+    cursor: pointer;
+}

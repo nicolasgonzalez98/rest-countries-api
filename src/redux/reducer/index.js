@@ -1,9 +1,10 @@
-import { FILTER_BY_REGION, GET_ALL_COUNTRIES, GET_COUNTRY_BY_NAME, SEARCH_BY_NAME } from "../actions"
+import { FILTER_BY_REGION, GET_ALL_COUNTRIES, GET_BORDER_COUNTRIES, GET_COUNTRY_BY_NAME, SEARCH_BY_NAME } from "../actions"
 
 const initialState = {
     all_countries: [],
     current_countries: [],
-    country_data: {}
+    country_data: {},
+    border_countries: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -37,6 +38,11 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 country_data: action.payload[0]
+            }
+        case GET_BORDER_COUNTRIES:
+            return {
+                ...state,
+                border_countries: action.payload
             }
         default: 
             return state

@@ -9,7 +9,7 @@
 
 #light, #light button{
   background-color: var(--light-mode-background);
-  color: var(--light-mode-text);
+  
 }
 
 #dark, #dark button{
@@ -19,30 +19,41 @@
 
 .App{
   min-height: 100vh;
+  
+}
+
+a{
+  text-decoration: none;
 }
 
 #light .card-country, 
 #light .SearchBar input, 
-#light .SearchBar ::placeholder
+#light .SearchBar ::placeholder,
 #light .RegionType select,
 #light .nav
 {
+  color: var(--light-mode-text);
   background-color: var(--dark-mode-text-light-mode-elements);
   box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
+  
 }
 
 #dark .card-country, 
 #dark .SearchBar input, 
 #dark .SearchBar ::placeholder,
 #dark .RegionType select,
-#dark .nav
+#dark .nav,
+#dark .back,
+#dark .box-name
 {
   background-color: var(--dark--mode--elements);
   color: var(--dark-mode-text-light-mode-elements);
 }
 
 #light .SearchBar,
-#light .RegionType{
+#light .RegionType,
+#light .back,
+#light .box-name{
   box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
 }
 

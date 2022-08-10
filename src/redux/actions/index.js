@@ -4,6 +4,7 @@ export const GET_ALL_COUNTRIES = 'GET_ALL_COUNTRIES'
 export const SEARCH_BY_NAME = 'SEARCH_BY_NAME'
 export const FILTER_BY_REGION = 'FILTER_BY_REGION'
 export const GET_COUNTRY_BY_NAME = 'GET_COUNTRY_BY_NAME'
+export const GET_BORDER_COUNTRIES = 'GET_BORDER_COUNTRIES'
 
 export function get_all_countries(){
     return function(dispatch){
@@ -64,6 +65,24 @@ export function get_country_by_name(name){
         .then(data => {
             dispatch({
                 type: GET_COUNTRY_BY_NAME,
+                payload: data
+            })
+        })
+    }
+}
+
+export function get_border_countries(names){
+    return function(dispatch){
+        return axios(`https://restcountries.com/v2/alpha?codes=${names}`)
+        .then(info => info.data)
+        .then(data => data.map(e => {
+            return {
+                name: e.name
+            }
+        }))
+        .then(data => {
+            dispatch({
+                type: GET_BORDER_COUNTRIES,
                 payload: data
             })
         })
