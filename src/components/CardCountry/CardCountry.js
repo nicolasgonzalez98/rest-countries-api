@@ -14,7 +14,7 @@ export function CardCountry({name, population, region, capital, flag}){
                         <div>
                             <p>Population: <span className='data-country'>{internationalNumberFormat.format(population)}</span></p>
                             <p>Region: <span className='data-country'>{region}</span></p>
-                            <p>Capital: <span className='data-country'>{capital && capital[0]}</span></p>
+                            <p>Capital: <span className='data-country'>{capital && capital.join(', ')}</span></p>
                         </div>
                     </div>
                 

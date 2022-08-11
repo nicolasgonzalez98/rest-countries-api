@@ -55,7 +55,7 @@ export function DetailCountry(){
                                         <p>Population: <span>{internationalNumberFormat.format(country.population)}</span></p>
                                         <p>Region: <span>{country.region}</span></p>
                                         <p>Subregion: <span>{country.subregion}</span></p>
-                                        <p>Capital: <span>{country.capital}</span></p>
+                                        <p>Capital: <span>{country.capital.join(', ')}</span></p>
                                     </div>
                                     
                                     <div className='right-bottom-info-country'>
