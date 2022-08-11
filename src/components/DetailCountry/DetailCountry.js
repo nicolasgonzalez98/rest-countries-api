@@ -27,6 +27,8 @@ export function DetailCountry(){
     }, [dispatch, name])
 
     let country = useSelector(state => state.country_data)
+
+    let internationalNumberFormat = new Intl.NumberFormat('en-US')
     
 
     return (
@@ -50,7 +52,7 @@ export function DetailCountry(){
                                 <article>
                                     <div className='left-top-info-country'>
                                         <p>Native name: <span>{country.native_name[1]}</span></p>
-                                        <p>Population: <span>{country.population}</span></p>
+                                        <p>Population: <span>{internationalNumberFormat.format(country.population)}</span></p>
                                         <p>Region: <span>{country.region}</span></p>
                                         <p>Subregion: <span>{country.subregion}</span></p>
                                         <p>Capital: <span>{country.capital}</span></p>

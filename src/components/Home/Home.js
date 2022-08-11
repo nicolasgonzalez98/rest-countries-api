@@ -18,8 +18,13 @@ export function Home(){
 
     return (
         <div className='Home'>
-            <Filters />
-            <CardsDisplay list={countries}/>
+            {!countries.length ? 
+                <div>Loading...</div> :
+                <>
+                    <Filters />
+                    <CardsDisplay list={countries}/>    
+                </>
+        }
         </div>
     )
 }
